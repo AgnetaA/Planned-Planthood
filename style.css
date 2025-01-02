@@ -219,6 +219,11 @@ button:hover {
   cursor: pointer;
 }
 
+button:focus {
+  outline: 2px solid var(--clr-flower);
+  outline-offset: 3px;  
+}
+
 
 /*------------------Header-----------------------*/
 
@@ -278,27 +283,45 @@ header {
 
 }
 
-.menulink:hover {
+.menulink:hover, .menulink:focus {
+  color: var(--clr-primary-light-1);
   background-color: var(--clr-accent);
   text-decoration: none;
 }
+
+.menulink:focus {
+  outline: 2px solid var(--clr-primary-light-2); 
+  outline-offset: -4px;
+}
+
+
 
 .hamb-menu-box {
   height: 3rem;
   width: 3.5rem;
   display: none;
-  cursor: pointer;
+
+}
+
+.hamb-menu {
+  fill: var(--clr-accent);
 }
 
 .hamb-menu-box:hover {
   background-color: var(--clr-accent);
+  cursor: pointer;
   .hamb-menu {
     fill: var(--clr-primary-light-1);
   }
 }
 
-.hamb-menu {
-  fill: var(--clr-accent);
+.hamb-menu-box:focus {
+  outline: 3px double var(--clr-primary-light-1);
+  outline-offset: -3px;
+  background-color: var(--clr-accent);
+  .hamb-menu {
+    fill: var(--clr-primary-light-1);
+  } 
 }
 
 
@@ -411,6 +434,11 @@ form input {
 
 input::placeholder {
   text-align: center;
+}
+
+input:focus {
+  outline: 2px solid var(--clr-flower);
+  outline-offset: -1px; 
 }
 
 
@@ -531,7 +559,8 @@ input::placeholder {
 .posted-by {
   margin-top: auto;
   display: flex;
-  font-size: var(--fs-200)
+  font-size: var(--fs-200);
+  align-items: center;
 }
 
 
@@ -664,6 +693,11 @@ footer p {
 
 footer a {
   color: var(--clr-accent-light-1);
+}
+
+footer a:focus {
+  outline: 2px solid var(--clr-accent-light-1);
+  outline-offset: 2px;
 }
 
 
